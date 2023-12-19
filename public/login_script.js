@@ -1,0 +1,40 @@
+function loginUser() {
+  const email = document.querySelector(".email").value;
+  const password = document.querySelector(".password").value;
+
+  // สร้างอ็อบเจ็กต์ XMLHttpRequest
+  const xhr = new XMLHttpRequest();
+
+  // กำหนดวิธีการเชื่อมต่อและ URL ที่จะส่งคำขอไป
+  xhr.open("POST", "login.php", true);
+
+  // กำหนดหัวข้อ Content-Type ในการส่งข้อมูล
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  // กำหนดฟังก์ชันที่จะทำงานเมื่อคำขอสำเร็จ
+  xhr.onload = function () {
+      if (xhr.status === 200) {
+          const response = xhr.responseText;
+
+          // ตรวจสอบคำตอบจากเซิร์ฟเวอร์
+          if (response === "Login successful.") {
+              // หากเข้าสู่ระบบสำเร็จ ให้เปลี่ยนหน้าไปยัง calendar.html
+              window.location.href = "calendar.html";
+          } else {
+              // หากมีข้อผิดพลาดในการเข้าสู่ระบบ แสดงแจ้งเตือน
+              alert(response);
+          }
+      }
+  };
+
+  // ส่งข้อมูลผู้ใช้และรหัสผ่านไปยังเซิร์ฟเวอร์
+  const data = `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+  xhr.send(data);
+}
+// ============= Dark mode =======================
+const darkModeIcon = document.querySelector("#darkMode-icon");
+
+darkModeIcon.onclick = () => {
+  darkModeIcon.classList.toggle('bx-sun');
+  document.body.classList.toggle('dark-mode');
+};

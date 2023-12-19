@@ -1,0 +1,139 @@
+:root {
+    --primary-clr: #f36825;
+    --bg-color:  #e2e1dc;
+    --bg2-color:  #ffffff;
+    --text-color: #333;
+    --bgcon-color:  #e7e7e7;
+    --icon-color:  #393939;
+    --calcon-color:  #fff;
+    --cal2con-color:  rgb(190, 190, 190);
+    --todo-color:  #f8b883;
+  }
+
+.dark-mode {
+    --bg-color: #262626;
+    --bg2-color:  #2a2929;
+    --text-color: #e2e1dc;
+    --bgcon-color:  #3b3b3c;
+    --icon-color:  #e9e9e9;
+    --calcon-color:  #262626;
+    --cal2con-color:  #0c0c0c;
+    --todo-color:  #9c5012;
+}
+
+#darkMode-icon {
+    font-size: 2.4rem;
+    color: var(--icon-color);
+    cursor: pointer;
+    position: absolute;
+    top : 23px;
+    right: 20px; 
+  }
+  
+  .header.sticky #darkMode-icon {
+    color: var(--icon-color);
+    opacity: .9;
+  }
+  
+  #menu-icon {
+    font-size: 3.6rem;
+    color: var(--icon-color);
+    display: none;
+  }
+
+
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    font-family: 'roboto', sans-serif;
+}
+
+.form{
+    width: 400px;
+    height: auto;
+    background-color: var(--bgcon-color);
+    font-family: 'roboto', sans-serif;
+    position: relative;
+    
+}
+
+.heading{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 770;
+    margin-bottom: 50px;
+    color: var(--primary-clr);
+    margin-top: 20px;
+}
+
+input,
+.submit-btn{
+    width: 80%;
+    height: 35px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: var(--primary-clr);
+    background-color: transparent;
+    border: none;
+    color: var(--icon-color);
+    padding: 15px;
+    transition: .5s;
+    text-transform: none;
+    border-bottom: 2px solid var(--primary-clr);
+    margin-bottom: 10px;
+}
+
+.submit-btn{
+    width: auto;
+    padding: 0 20px;
+    cursor: pointer;
+    margin: 50px auto 0;
+    background: var(--primary-clr); 
+    color: #fff;
+}
+
+.link{
+    text-align: center;
+    text-transform: none;
+    color: var(--text-color);
+    display: block;
+    margin: 30px auto;
+}
+
+input::placeholder{
+    background-color: transparent;
+    transition: color 0.5s ease, transform 0.5s ease; 
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transform-origin: left; 
+
+}
+
+
+input:focus,
+.submit-btn:hover{
+    background: var(--todo-color);
+    color: #000;
+}
+
+input:focus::placeholder{
+    color: var(--icon-color);
+    background-color: transparent;
+    top: 35%; 
+    transform: translateY(-100%);
+    font-size: 9px;
+}
+

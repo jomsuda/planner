@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="alert-box">
+        <p class="alert" id="registration-message"></p>
+    </div>
+
+    <div class="form">
+        <form method="post" action="register.php">
+            <h1 class="heading">Register <div class="bx bx-moon" id="darkMode-icon"></div></h1>
+        
+                <input type="text" placeholder="Username" autocomplete="off" class="username" required>
+                <input type="email" placeholder="Email" autocomplete="off" class="email" required>
+                <input type="password" placeholder="Password" autocomplete="off" class="password" required>
+                <button class="submit-btn" onclick="registerUser()">Register</button>
+                <a href="index.html" class="link">Already have an account? <span>Login here.</span></a>
+        </form>
+    </div>
+
+    <script src="register_script.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="alert-box">
+        <p class="alert"></p>
+    </div>
+
+    <div class="form">
+        <form method="post" action="login.php">
+            <h1 class="heading">Login <div class="bx bx-moon" id="darkMode-icon"></div></h1>
+        
+            <input type="email" placeholder="Email" autocomplete="off" class="email" required>
+            <input type="password" placeholder="Password" autocomplete="off" class="password" required>
+            <button class="submit-btn" onclick="loginUser()">Log in</button>
+            <a href="register.html" class="link">Don't have an account? <span>Create a new account.</span></a>
+        </form>
+    </div>
+    
+
+    <script src="login_script.js"></script>
+
+</body>
+</html>
+

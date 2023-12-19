@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="m-style.css" />
+    <title>Plannie | Calendar</title>
+    <link rel="icon" href="/plannie2/img/calendar.png" type="image/x-icon">
+  </head>
+  
+  <body>
+    
+    <div class="container">
+      <header class="header">
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+        <div class="colorTheme-icon">
+          <div class="icon">
+            <i class="bx bx-palette"></i>
+          </div>
+          <div class="color-box">
+            <h3>Color Switcher</h3>
+            <div class="color-switcher">
+              <button class="btn black" data-color="#383838 #8f8f8f #ffffff #e2e1dc"></button>
+              <button class="btn yellow" data-color="#ffe95c #fdefa0 #c8a219 #e2e1dc"></button>
+              <button class="btn green" data-color="#3ae969 #a8e7b8 #20923d #e2e1dc"></button>
+              <button class="btn blue" data-color="#42d6ff #9cddef #1e86a3 #e2e1dc"></button>
+              <button class="btn red" data-color="#f82a4d #ffa5b4 #a3293e #e2e1dc"></button>
+              <button class="btn orange active" data-color="#f36825 #f8b883 #9c5012 #e2e1dc"></button>
+              <button class="btn pink" data-color="#fd51ba #f8acdb #ab2477 #e2e1dc"></button>
+              <button class="btn purple" data-color="#b640e1 #d195e7 #72218f #e2e1dc"></button>
+              
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="left">
+        <div class="calendar">
+          <div class="month">
+            <i style="color: var(--primary-clr);" class="fas fa-angle-left prev"></i>
+            <div style="color: var(--primary-clr);" class="date"></div>
+            <i style="color: var(--primary-clr);" class="fas fa-angle-right next"></i>
+          </div>
+          <div class="weekdays">
+            <div class="sun">Sun</div>
+            <div class="mon">Mon</div>
+            <div class="tue">Tue</div>
+            <div class="wed">Wed</div>
+            <div class="thu">Thu</div>
+            <div class="fri">Fri</div>
+            <div class="sat">Sat</div>
+          </div>
+          <div class="days"></div>
+          <div class="goto-today">
+            <div class="goto">
+              <input type="text" placeholder="mm/yyyy" class="date-input" />
+              <button class="goto-btn">Go</button>
+            </div>
+            <button class="today-btn">Today</button>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="today-date">
+          <div class="event-day"></div>
+          <div class="event-date"></div>
+        </div>
+        <div class="events"></div>
+        <div class="add-event-wrapper">
+          <div class="add-event-header">
+            <div class="title">Add Event</div>
+            <i class="fas fa-times close"></i>
+          </div>
+          <div class="add-event-body">
+            <div class="add-event-input">
+              <input type="text" placeholder="Event Name" class="event-name" />
+            </div>
+            <div class="add-event-input">
+              <input type="text" placeholder="Event Description" class="event-description" />
+            </div>
+            <div class="add-event-input">
+              <input
+                type="text"
+                placeholder="Event Time From"
+                class="event-time-from"
+              />
+            </div>
+            <div class="add-event-input">
+              <input
+                type="text"
+                placeholder="Event Time To"
+                class="event-time-to"
+              />
+            </div>
+          </div>
+
+          <div class="add-event-footer">
+            <button class="add-event-btn">Add Event</button>
+          </div>
+
+          
+        </div>
+      </div>
+      <button class="add-event">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+
+
+    <script src="m-script.js"></script>
+  </body>
+</html>
